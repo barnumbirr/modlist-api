@@ -1,4 +1,4 @@
-<h1><img src="https://raw.github.com/c0ding/modlist-api/master/doc/modlist.png" height=55 alt="modlist" title="modlist">modlist-api</h1>
+<h1><img src="https://raw.github.com/c0ding/modlist-api/master/doc/modlist.png" height=65 alt="modlist" title="modlist"> modlist-api</h1>
 
 [![PyPi Version](http://img.shields.io/pypi/v/modlist.svg)](https://pypi.python.org/pypi/modlist/)   [![Downloads](http://img.shields.io/pypi/dm/modlist.svg)](https://pypi.python.org/pypi/modlist/)
 
@@ -74,7 +74,7 @@ This API can currently retrieve the following data from [MCF Modlist](http://mod
   - /api/v3/:version.md5:
 
 ```
->>> modlist.hash(VERSION)
+>>> modlist.md5hash(VERSION)
 b7b9fb60af57342d6c4fc8a0fc61891b
 ```
 
