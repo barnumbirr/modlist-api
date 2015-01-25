@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Modlist-api by c0ding</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Modlist-api</h1>
+        <p>Python API wrapper for MCF Modlist.</p>
+
+        <p class="view"><a href="https://github.com/c0ding/modlist-api">View the Project on GitHub <small>c0ding/modlist-api</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/c0ding/modlist-api/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/c0ding/modlist-api/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/c0ding/modlist-api">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="modlist-api" class="anchor" href="#modlist-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<img src="https://raw.github.com/c0ding/modlist-api/master/doc/modlist.png" height="55" alt="modlist" title="modlist">modlist-api</h1>
+
+<p><a href="https://pypi.python.org/pypi/modlist/"><img src="http://img.shields.io/pypi/v/modlist.svg" alt="PyPi Version"></a>   <a href="https://pypi.python.org/pypi/modlist/"><img src="http://img.shields.io/pypi/dm/modlist.svg" alt="Downloads"></a></p>
+
+<p><strong>modlist</strong> is an APACHE licensed library written in Python designed to provide a simple to use API wrapper for <a href="http://modlist.mcf.li/">MCF Modlist</a>.</p>
+
+<h2>
+<a id="more-about-mcf-modlist" class="anchor" href="#more-about-mcf-modlist" aria-hidden="true"><span class="octicon octicon-link"></span></a>More about MCF Modlist:</h2>
+
+<p>MCF Modlist was created to be a comprehensive list of as many mods as possible. The MCF Mods Forum is quite hectic and popular threads easily bury fresh, new ideas that pop up and never quite gain attention.
+Furthermore, searching within the forums was limited, as you could not accurately pinpoint mod versions, and each thread had its own format to display things. There was also the matter of compatibility and dependency. Thus the list was born.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation:</h2>
+
+<p>From source use</p>
+
+<pre><code>$ python setup.py install
+</code></pre>
+
+<p>or install from PyPi</p>
+
+<pre><code>$ pip install modlist
+</code></pre>
+
+<h2>
+<a id="modlist-apiv3-documentation" class="anchor" href="#modlist-apiv3-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modlist APIv3 Documentation:</h2>
+
+<p>This API can currently retrieve the following data from <a href="http://modlist.mcf.li/">MCF Modlist</a>:</p>
+
+<ul>
+<li>/api/v3/:version.json:</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; import modlist
+&gt;&gt;&gt; modlist.mods(VERSION)
+[
+    {
+        "name": "Ambient Birds", 
+        "author": [
+            "the_tubes"
+        ], 
+        "versions": [
+            "1.8"
+        ], 
+        "dependencies": [
+            "Not Forge Compatible", 
+            "Base Edit"
+        ], 
+        "link": "https://www.reddit.com/r/Minecraft/comments/2fabek/18_mod_ambient_birds/", 
+        "type": [
+            "SSP"
+        ], 
+        "desc": "Adds small birds of different colors."
+    }, 
+    {
+        "other": "(Beta)", 
+        "link": "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1278239-animal-bikes-added-wither-and-flower-bikes-1-8", 
+        "name": "Animal Bikes", 
+        "dependencies": [
+            "Forge Compatible"
+        ], 
+        "author": [
+            "Noppes"
+        ], 
+        "versions": [
+            "1.8"
+        ], 
+        "type": [
+            "Universal"
+        ], 
+        "desc": "A multiplayer mod which allows you to ride animals."
+    },
+    ...
+    ...
+    ...
+]
+</code></pre>
+
+<ul>
+<li>/api/v3/:version.md5:</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; modlist.hash(VERSION)
+b7b9fb60af57342d6c4fc8a0fc61891b
+</code></pre>
+
+<ul>
+<li>/api/v3/recent.json:</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; modlist.recent()
+{
+    "1.7.2": [
+        "(January/16/2015)",
+        "  *Updated \"Dense Ores\": Updated link to CurseForge page",
+        "  +Added \"Bladecraft\"",
+        "  +Added \"Better Rain\"",
+        "  +Added \"DecoCraft\"",
+        "  +Added \"XtraBlocks Extreme Edition\"",
+        "  +Added \"Kwasti Villagers\"",
+        "  +Added \"Village Marker\"",
+        "  +Added \"The Seasons Mod\": Currently in Alpha"
+    ],
+    "1.6.4": [
+        "(January/16/2015)",
+        "  +Added \"DecoCraft\"",
+        "  +Added \"XtraBlocks Extreme Edition\""
+    ],
+    "1.5.2": [
+        "(January/16/2015)",
+        "  +Added \"Bladecraft\"",
+        "  +Added \"DecoCraft\"",
+        "  +Added \"XtraBlocks Extreme Edition\""
+    ]
+}
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License:</h2>
+
+<pre><code>  Apache v2.0 License
+  Copyright 2014-2015 Martin Simon
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+</code></pre>
+
+<h2>
+<a id="useful-links" class="anchor" href="#useful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful links:</h2>
+
+<ul>
+<li><a href="http://modlist.mcf.li/">MCF Modlist</a></li>
+<li><a href="https://minecraft.net/">Minecraft</a></li>
+</ul>
+
+<h2>
+<a id="buy-me-a-coffee" class="anchor" href="#buy-me-a-coffee" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buy me a coffee?</h2>
+
+<p>If you feel like buying me a coffee (or a beer?), donations are welcome:</p>
+
+<pre><code>WDC : WbcWJzVD8yXt3yLnnkCZtwQo4YgSUdELkj
+HBN : F2Zs4igv8r4oJJzh4sh4bGmeqoUxLQHPki
+DOGE: DRBkryyau5CMxpBzVmrBAjK6dVdMZSBsuS
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/c0ding">c0ding</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
