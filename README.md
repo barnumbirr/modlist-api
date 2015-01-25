@@ -4,9 +4,9 @@
 
 **modlist** is an APACHE licensed library written in Python designed to provide a simple to use API wrapper for [MCF Modlist](http://modlist.mcf.li/).
 
-## More about Darkcoin:
+## More about MCF Modlist:
 
-The modlist was created to be a comprehensive list of as many mods as possible. The MCF Mods Forum is quite hectic and popular threads easily bury fresh, new ideas that pop up and never quite gain attention.
+MCF Modlist was created to be a comprehensive list of as many mods as possible. The MCF Mods Forum is quite hectic and popular threads easily bury fresh, new ideas that pop up and never quite gain attention.
 Furthermore, searching within the forums was limited, as you could not accurately pinpoint mod versions, and each thread had its own format to display things. There was also the matter of compatibility and dependency. Thus the list was born.
 
 ## Installation:
